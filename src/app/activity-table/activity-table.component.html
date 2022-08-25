@@ -1,1 +1,8 @@
-<p>activity-table works!</p>
+<h1> activities </h1>
+
+<div *ngIf="activities">
+    <div *ngFor="let activity of activities | async ">
+        <p> {{activity.activity}}</p>
+        <p> {{activity.type}}</p>
+    </div>
+</div>

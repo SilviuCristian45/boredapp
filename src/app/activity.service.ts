@@ -16,7 +16,7 @@ export class ActivityService {
   }
 
   getActivities() {
-    return this.httpClient.get<Activity>(this.baseUrl + this.activitiesEndpoint)
+    return this.httpClient.get<Activity[]>(this.baseUrl + this.activitiesEndpoint)
   }
 
   clearActivities() {
