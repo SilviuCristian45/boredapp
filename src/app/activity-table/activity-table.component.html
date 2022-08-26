@@ -1,8 +1,22 @@
-<h1> activities </h1>
+<h1> Activities </h1>
 
-<div *ngIf="activities">
-    <div *ngFor="let activity of activities | async ">
-        <p> {{activity.activity}}</p>
-        <p> {{activity.type}}</p>
-    </div>
-</div>
+<table>
+    <tr>
+        <th> Activity </th>
+        <th> Type </th>
+        <th> Participants </th>
+        <th> Price</th>
+        <th> Link</th>
+        <th> Key </th>
+        <th> Accessibility </th>
+    </tr>   
+    <tr *ngFor="let activity of activities | async">
+        <td> {{activity.activity}} </td>
+        <td> {{activity.type}}</td>
+        <td> {{activity.participants}}</td>
+        <td> {{activity.price}}</td>
+        <td> {{activity.link}}</td>
+        <td> {{activity.key}}</td>
+        <td> {{activity.accessibility}}</td>
+    </tr>
+</table>

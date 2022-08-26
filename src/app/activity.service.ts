@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class ActivityService {
   private baseUrl = "http://localhost:3000"
   private activitiesEndpoint = "/activities"
+  private randomActivityEndpoint = "/activity"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,5 +21,9 @@ export class ActivityService {
   }
 
   clearActivities() {
+  }
+
+  getRandomActivity() {
+    return this.httpClient.get<Activity>(this.baseUrl + this.randomActivityEndpoint)
   }
 }

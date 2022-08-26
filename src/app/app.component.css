@@ -1,6 +1,5 @@
-.filler {
-    flex: 1 1 auto;
- }
- .gap {
-    margin-right: 10px;
- }
+.container {
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
