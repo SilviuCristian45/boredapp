@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
 
   insertRandomActivity() {
     this.activityService.insertRandomActivity().subscribe()
+    setTimeout( () => location.reload(), 1000)
   }
 
 }
