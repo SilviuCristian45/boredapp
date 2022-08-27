@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityService } from '../activity.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activityService: ActivityService) { }
 
   ngOnInit(): void {
+  }
+
+  insertRandomActivity() {
+    const result = this.activityService.insertRandomActivity()
+    console.warn(result)
   }
 
 }

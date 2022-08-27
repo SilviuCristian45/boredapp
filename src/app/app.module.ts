@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ActivityComponent } from './activity/activity.component';
 import { RouterModule } from '@angular/router';
+import {MatCard, MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,8 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatIconModule,
     MatMenuModule,
+    MatCardModule,
     RouterModule.forRoot([
-      {path: '', component: ActivityTableComponent},
       {path: 'random-activity', component: ActivityComponent},
     ]),
   ],

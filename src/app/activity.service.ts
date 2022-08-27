@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Activity } from './activities';
 import { Observable } from 'rxjs';
 
@@ -10,6 +10,7 @@ export class ActivityService {
   private baseUrl = "http://localhost:3000"
   private activitiesEndpoint = "/activities"
   private randomActivityEndpoint = "/activity"
+  private insertRandomActivityEndpoint = "/placeRandomActivity"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,4 +27,9 @@ export class ActivityService {
   getRandomActivity() {
     return this.httpClient.get<Activity>(this.baseUrl + this.randomActivityEndpoint)
   }
+
+  insertRandomActivity() {
+    return this.httpClient.post<Activity>(this.baseUrl + this.insertRandomActivityEndpoint, {})
+  }
+
 }
