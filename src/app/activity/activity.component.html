@@ -1,0 +1,16 @@
+<mat-card>
+<mat-card-title>Generated activity</mat-card-title> 
+
+<mat-card-content class="content">
+    <ul *ngIf="activity | async as localData">
+        <li> {{ localData.activity }} </li>
+        <li> {{ localData.type }} </li>
+        <li> {{ localData.participants }} </li>
+        <li> {{ localData.price }} </li>
+        <li> {{ localData.link }} </li>
+        <li> {{ localData.key }} </li>
+        <li> {{ localData.accessibility }} </li>
+    </ul>
+</mat-card-content>
+
+</mat-card>
