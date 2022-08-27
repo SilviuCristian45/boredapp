@@ -29,6 +29,7 @@ export class ActivityService {
   }
 
   insertRandomActivity() {
+   //initial faceam asta:  return this.httpClient.post<Activity>(this.baseUrl + this.insertRandomActivityEndpoint, {})
     return this.httpClient.post<Activity>(this.baseUrl + this.insertRandomActivityEndpoint, {})
   }
 

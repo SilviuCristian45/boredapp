@@ -14,8 +14,7 @@ export class NavbarComponent implements OnInit {
   }
 
   insertRandomActivity() {
-    const result = this.activityService.insertRandomActivity()
-    console.warn(result)
+    this.activityService.insertRandomActivity().subscribe()
   }
 
 }
