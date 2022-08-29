@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Activity } from './activities';
 import { Observable } from 'rxjs';
-import {OptionalString} from './utils'
+import {Optional} from './utils'
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class ActivityService {
     return this.httpClient.get<Activity[]>(this.baseUrl + this.activitiesEndpoint)
   }
 
-  getActivitiesByType(type: OptionalString) {
+  getActivitiesByType(type: Optional<string>) {
     return this.httpClient.get<Activity[]>(this.baseUrl + this.activitiesEndpoint + "/" + type)
   }
 
