@@ -1,0 +1,28 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <label for="activityType">Type : </label>
+    <input type="text" name="activityType" id="activityType" formControlName="type">
+    <button type="submit"> Display activities </button>
+</form>
+
+<h1> {{checkoutForm.value.type}} activities </h1>
+
+<table *ngIf="activities">
+    <tr>
+        <th> Activity </th>
+        <th> Type </th>
+        <th> Participants </th>
+        <th> Price</th>
+        <th> Link</th>
+        <th> Key </th>
+        <th> Accessibility </th>
+    </tr>   
+    <tr *ngFor="let activity of activities | async">
+        <td> {{activity.activity}} </td>
+        <td> {{activity.type}}</td>
+        <td> {{activity.participants}}</td>
+        <td> {{activity.price}}</td>
+        <td> {{activity.link}}</td>
+        <td> {{activity.key}}</td>
+        <td> {{activity.accessibility}}</td>
+    </tr>
+</table>

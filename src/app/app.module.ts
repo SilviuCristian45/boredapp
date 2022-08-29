@@ -13,6 +13,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ActivityComponent } from './activity/activity.component';
 import { RouterModule } from '@angular/router';
 import {MatCard, MatCardModule} from '@angular/material/card';
+import { ActivitiesTypeComponent } from './activities-type/activities-type.component';
+import { ReactiveFormsModule} from '@angular/forms' 
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import {MatCard, MatCardModule} from '@angular/material/card';
     ActivityTableComponent,
     NavbarComponent,
     ActivityComponent,
+    ActivitiesTypeComponent,
     
   ],
   imports: [
@@ -31,8 +34,10 @@ import {MatCard, MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatMenuModule,
     MatCardModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: 'random-activity', component: ActivityComponent},
+      {path: 'activitiesType', component: ActivitiesTypeComponent}
     ]),
   ],
   providers: [],
